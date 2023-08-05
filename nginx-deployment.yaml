@@ -16,7 +16,7 @@ spec: # especificação do recurso
         prometheus.io/port: '9113' # porta do target
     spec: # especificação do template
       containers: # containers do template 
-        - name: edmongo # nome do container
+        - name: nginx # nome do container
           image: nginx:1.19.1 # imagem do container do Nginx
           ports: # portas do container
             - containerPort: 80 # porta do container
