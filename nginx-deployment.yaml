@@ -6,7 +6,7 @@ spec: # especificação do recurso
   selector: # seletor para identificar os pods que serão gerenciados pelo deployment
     matchLabels: # labels que identificam os pods que serão gerenciados pelo deployment
       app: nginx # label que identifica o app que será gerenciado pelo deployment
-  replicas: 4 # quantidade de réplicas do deployment
+  replicas: 6 # quantidade de réplicas do deployment
   template: # template do deployment
     metadata: # metadados do template
       labels: # labels do template
@@ -16,8 +16,8 @@ spec: # especificação do recurso
         prometheus.io/port: '9113' # porta do target
     spec: # especificação do template
       containers: # containers do template 
-        - name: nginx # nome do container
-          image: nginx #nginx:1.19.1 # imagem do container do Nginx
+        - name: edmongo # nome do container
+          image: alpine #nginx:1.19.1 # imagem do container do Nginx
           ports: # portas do container
             - containerPort: 80 # porta do container
               name: http # nome da porta
